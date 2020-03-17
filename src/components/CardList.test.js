@@ -1,3 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import Card from './CardList'
+import CardList from './CardList'
+
+it('expect to render Card component', () => {
+  expect(shallow(<CardList />)).toMatchSnapshot()
+})
