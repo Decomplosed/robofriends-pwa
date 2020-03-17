@@ -9,12 +9,6 @@ import Header from '../Header'
 import './MainPage.css'
 
 class MainPage extends Component {
-  constructor() {
-    super()
-    this.state = {
-      count: 1
-    }
-  }
   componentDidMount() {
     this.props.onRequestRobots()
   }
@@ -42,4 +36,4 @@ class MainPage extends Component {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App)
+export default MainPage
