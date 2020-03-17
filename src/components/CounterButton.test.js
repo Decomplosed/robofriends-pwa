@@ -19,3 +19,10 @@ it('correctly increments the counter', () => {
   wrapper.find('[id="counter"]').simulate('keypress')
   expect(wrapper.state()).toEqual({ count: 3 })
 })
+
+it('gets proper color from props', () => {
+  const mockColor = 'red'
+  const wrapper = shallow(<CounterButton color={mockColor} />)
+
+  expect(wrapper.props().color).toEqual('red')
+})
