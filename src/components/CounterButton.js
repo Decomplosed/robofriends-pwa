@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 class CounterButton extends Component {
   constructor(props) {
     super(props)
-    this.state = { count: 1 }
+    this.state = { count: 0 }
   }
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -14,7 +14,6 @@ class CounterButton extends Component {
   }
 
   render() {
-    console.log('counter')
     return (
       <button
         id='counter'
