@@ -30,8 +30,8 @@ it('filters robots correctly', () => {
     searchField: 'a',
     isPending: false
   }
-  wrapperFilters = shallow(<MainPage {...mockPropsFilters} />)
+  const wrapperFilters = shallow(<MainPage {...mockPropsFilters} />)
 
-  expect(wrapper.instance().filterRobots([])).toEqual([])
-  expect()
+  expect(wrapper.instance().filterRobots()).toEqual([])
+  expect(wrapper.instance().filterRobots()).toEqual([])
 })
