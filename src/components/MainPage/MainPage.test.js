@@ -20,5 +20,16 @@ it('renders MainPage without crashing', () => {
 })
 
 it('filters robots correctly', () => {
+  const mockProps = {
+    onRequestRobots: jest.fn(),
+    robots: [{
+      id: 3,
+      name: 'John',
+      email: 'john@gmail.com'
+    }],
+    searchField: 'a',
+    isPending: false
+  }
+  
   expect(wrapper.instance().filterRobots([])).toEqual([])
 })
