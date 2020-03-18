@@ -42,3 +42,23 @@ it('filters robots correctly', () => {
     }
   ])
 })
+
+it('filters robots correctly if empty', () => {
+  const mockPropsFiltersIfEmpty = {
+    onRequestRobots: jest.fn(),
+    robots: [
+      {
+        id: 3,
+        name: 'John',
+        email: 'john@gmail.com'
+      }
+    ],
+    searchField: 'a',
+    isPending: false
+  }
+  const wrapperFiltersIfEmpty = shallow(
+    <MainPage {...mockPropsFiltersIfEmpty} />
+  )
+
+  expect(wrapperFiltersIfEmpty.instance().filterRobots()).toEqual([])
+})
