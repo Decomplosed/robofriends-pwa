@@ -20,5 +20,5 @@ it('renders MainPage without crashing', () => {
 })
 
 it('filters robots correctly', () => {
-  expect(wrapper)
+  expect(wrapper.instance().filterRobots([])).toEqual([])
 })
