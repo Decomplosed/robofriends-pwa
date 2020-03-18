@@ -70,4 +70,17 @@ describe('requestRobots', () => {
       isPending: false
     })
   })
+
+  it('should handle REQUEST_ROBOTS_FAILED', () => {
+    expect(
+      reducers.requestRobots(initialStateRobots, {
+        type: REQUEST_ROBOTS_FAILED,
+        payload: 'Nooooo!!! Error!!!'
+      })
+    ).toEqual({
+      error: 'Nooooo!!! Error!!!',
+      robots: [],
+      isPending: false
+    })
+  })
 })
