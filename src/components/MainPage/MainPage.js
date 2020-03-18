@@ -13,12 +13,15 @@ class MainPage extends Component {
     this.props.onRequestRobots()
   }
 
-  filterRobots = robots => robots.filter(robot => {
-    return robot.name.toLowerCase().includes(this.props.searchField.toLowerCase())
-  })
+  filterRobots = robots =>
+    robots.filter(robot => {
+      return robot.name
+        .toLowerCase()
+        .includes(this.props.searchField.toLowerCase())
+    })
 
   render() {
-    const { onSearchChange, isPending } = this.props
+    const { robots, onSearchChange, isPending } = this.props
     return (
       <div className='tc'>
         <Header />
