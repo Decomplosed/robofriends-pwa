@@ -46,4 +46,28 @@ describe('requestRobots', () => {
       isPending: true
     })
   })
+
+  it('should handle REQUEST_ROBOTS_SUCCESS', () => {
+    expect(
+      reducers.requestRobots(initialStateRobots, {
+        type: REQUEST_ROBOTS_SUCCESS,
+        payload: [
+          {
+            id: '123',
+            name: 'test',
+            email: 'test@gmail.com'
+          }
+        ]
+      })
+    ).toEqual({
+      robots: [
+        {
+          id: '123',
+          name: 'test',
+          email: 'test@gmail.com'
+        }
+      ],
+      isPending: false
+    })
+  })
 })
