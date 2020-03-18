@@ -14,3 +14,7 @@ beforeEach(() => {
 
   wrapper = shallow(<MainPage {...mockProps} />)
 })
+
+it('renders MainPage without crashing', () => {
+  expect(wrapper).toMatchSnapshot()
+})
