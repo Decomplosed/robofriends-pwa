@@ -19,7 +19,7 @@ describe('searchRobots', () => {
   it('should handle CHANGE_SEARCHFIELD', () => {
     expect(
       reducers.searchRobots(initialStateSearch, {
-        type: type.CHANGE_SEARCHFIELD,
+        type: CHANGE_SEARCHFIELD,
         payload: 'abc'
       })
     ).toEqual({ searchField: 'abc' })
