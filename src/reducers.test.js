@@ -29,10 +29,21 @@ describe('searchRobots', () => {
 describe('requestRobots', () => {
   const initialStateRobots = {
     robots: [],
-    isPending: true
+    isPending: false
   }
 
   it('should return the initial state', () => {
     expect(reducers.requestRobots(undefined, {})).toEqual(initialStateRobots)
+  })
+
+  it('should handle REQUEST_ROBOTS_PENDING', () => {
+    expect(
+      reducers.requestRobots(initialStateRobots, {
+        type: REQUEST_ROBOTS_PENDING
+      })
+    ).toEqual({
+      robots: [],
+      isPending: true
+    })
   })
 })
