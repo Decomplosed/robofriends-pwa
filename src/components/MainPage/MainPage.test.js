@@ -11,6 +11,8 @@ beforeEach(() => {
     searchField: '',
     isPending: false
   }
+
+  wrapper = shallow(<MainPage {...mockProps} />)
 })
 
 it('expect to render App component', () => {
