@@ -18,7 +18,7 @@ class MainPage extends Component {
   })
 
   render() {
-    const { robots, searchField, onSearchChange, isPending } = this.props
+    const { onSearchChange, isPending } = this.props
     return (
       <div className='tc'>
         <Header />
