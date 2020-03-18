@@ -14,11 +14,3 @@ beforeEach(() => {
 
   wrapper = shallow(<MainPage {...mockProps} />)
 })
-
-it('expect to render App component', () => {
-  const mockStore = {
-    robots: [],
-    searchField: ''
-  }
-  expect(shallow(<App store={mockStore} />)).toMatchSnapshot()
-})
