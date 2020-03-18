@@ -25,3 +25,10 @@ describe('searchRobots', () => {
     ).toEqual({ searchField: 'abc' })
   })
 })
+
+describe('requestRobots', () => {
+  const initialStateRobots = {
+    robots: [],
+    isPending: true
+  }
+})
