@@ -23,4 +23,5 @@ it('SHould create an action to search robots', () => {
 it('handles requesting robots API', () => {
   const store = mockStore()
   store.dispatch(actions.requestRobots())
+  const action = store.getActions()
 })
