@@ -4,7 +4,10 @@ import {
   REQUEST_ROBOTS_PENDING,
   REQUEST_ROBOTS_SUCCESS,
   REQUEST_ROBOTS_FAILED
- } from './constants'
+} from './constants'
+
+import configureStore from 'redux-mock-store'
+import thunkMiddleware from 'redux-thunk'
 
 it('SHould create an action to search robots', () => {
   const text = 'wooo'
