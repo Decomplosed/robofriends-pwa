@@ -27,5 +27,5 @@ it('handles requesting robots API', () => {
   const expectedAction = {
     type: REQUEST_ROBOTS_PENDING
   }
-  expect(actions.requestRobots()).toEqual(expectedAction)
+  expect(action[0]).toEqual(expectedAction)
 })
