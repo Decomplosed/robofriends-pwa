@@ -14,3 +14,7 @@ it('SHould create an action to search robots', () => {
   }
   expect(actions.setSearchField(text)).toEqual(expectedAction)
 })
+
+it('handles requesting robots API', () => {
+  
+})
