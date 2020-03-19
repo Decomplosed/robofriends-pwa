@@ -9,6 +9,8 @@ import {
 it('SHould create an action to search robots', () => {
   const text = 'wooo'
   const expectedAction = {
-    type:
+    type: CHANGE_SEARCHFIELD,
+    payload: text
   }
+  expect(actions.setSearchField(text)).toEqual(expectedAction)
 })
