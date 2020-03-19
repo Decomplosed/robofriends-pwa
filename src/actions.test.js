@@ -6,7 +6,7 @@ import {
   REQUEST_ROBOTS_FAILED
 } from './constants'
 
-import configureStore from 'redux-mock-store'
+import configureMockStore from 'redux-mock-store'
 import thunkMiddleware from 'redux-thunk'
 
 const mockStore = configureMockStore([thunkMiddleware])
