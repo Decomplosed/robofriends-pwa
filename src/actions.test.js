@@ -24,4 +24,8 @@ it('handles requesting robots API', () => {
   const store = mockStore()
   store.dispatch(actions.requestRobots())
   const action = store.getActions()
+  const expectedAction = {
+    type: REQUEST_ROBOTS_PENDING
+  }
+  expect(actions.requestRobots()).toEqual(expectedAction)
 })
