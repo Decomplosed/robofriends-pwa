@@ -9,6 +9,8 @@ import {
 import configureStore from 'redux-mock-store'
 import thunkMiddleware from 'redux-thunk'
 
+const mockStore = configureMockStore([thunkMiddleware])
+
 it('SHould create an action to search robots', () => {
   const text = 'wooo'
   const expectedAction = {
